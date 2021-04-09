@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Object oriented programming vs structured programming - Alex's website</title>
+        <link rel="shortcut icon" href="https://alejandrodefranciscouceda.github.io/Logotipo(con-fondo-negro).png">
+        <style>
+            body{
+                margin-top:0px;
+                background-image: url(https://a-static.besthdwallpaper.com/hexagono-y-del-patron-papel-pintado-2560x1600-53169_7.jpg);
+                font-family: "Times New Roman", monospace;
+                overflow-x: hidden;
+                overflow-y:hidden;               
+            }
+            header{
+                display: block;
+                background-image: url(https://img.freepik.com/foto-gratis/textura-piedra_1194-5575.jpg?size=626&ext=jpg);
+                border-radius:0px 0px 8px 8px;
+                box-sizing: border-box;
+                padding-bottom: 0.75%;
+                width: 76%;
+                position: fixed;
+                left: 12%;
+                z-index:1;
+            }
+            header img{
+                width: 14%;
+            }
+            header a {
+                text-decoration: none;
+                color: white;
+                text-align: center;
+            }
+            #obj-or-pro-vs-struc-pro-img{
+                display: block; 
+                margin:auto;
+                width: 7%;
+            }
+            nav{
+                display:flex; 
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                margin-top:0.15%;
+            }
+            nav a{
+                text-decoration:none;
+            }
+            .nav{
+                color:rgb(184, 102, 25);
+                margin-top:0%;
+                margin-bottom:0.5%;
+                margin-right:1%;
+                margin-left:1%;
+                padding-top: 1.5%;
+                padding-bottom: 1.25%;
+                padding-left: 2%;
+                padding-right: 2%;
+                font-size: 17px;
+                font-weight: 800;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            #title{
+                padding-top:1%;
+                color:rgb(12, 43, 184);
+                text-align: center;
+                display:inline;
+            }
+            #title:hover, #title:focus{
+                background-color: rgb(202, 255, 197);
+            }
+            header a:hover, header a:focus{
+                color:white;
+                background-color: rgb(111, 238, 99);
+            }
+            header a:active{
+                border:4px outset rgb(247, 166, 45);
+            }
+            #header-right-side{
+                background-image: url(https://img.freepik.com/foto-gratis/textura-marmol-blanco-fondo-abstracto_28586-1427.jpg?size=626&ext=jpg);
+                border-radius:0px 0px 0px 8px;
+                box-sizing: border-box;
+                padding-bottom: 5%;
+                width: 16.5%;
+                height:100%;
+                float:right;
+                position: absolute;
+                right: -18%;
+                top:0%;
+                text-align:center;
+            }
+            #Logo{
+                padding-top:20%;
+                width:50%;
+                border-radius:8px;
+            }
+            #header-left-side{
+                background-image: url(https://img.freepik.com/foto-gratis/textura-marmol-blanco-fondo-abstracto_28586-1427.jpg?size=626&ext=jpg);
+                border-radius:0px 0px 8px 0px;
+                box-sizing: border-box;
+                width: 20%;
+                height:100%;
+                position: absolute;
+                left: -22%;
+                top:0%;
+                text-align: center;
+                margin:auto;
+                box-sizing: border-box;
+                padding-top: 5%;
+                padding-left: 2%;
+                font-family: "times new roman", monospace;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            #header-left-side a{
+                border-radius: 8px;
+                padding:7%;
+                margin-left:8%;
+                color: black;
+            }
+            #header-left-side a:hover{
+                color:white;
+                background-color: rgb(47, 223, 56);
+            }
+            #container{
+                display:flex;
+                color:rgb(255, 255, 255);
+                font-weight: 400;
+                font-size: 20px;
+                width: 100%;
+                max-height:100vh;
+                text-align: center;
+                justify-content:center;
+                box-sizing:border-box;
+                z-index:2;
+            }
+            #contained1{
+                display:flex;
+                justify-content:center;
+                width:100%;
+                text-align: justify;
+                margin-top:12%;
+                overflow-y: scroll;               
+            }
+            #contained2{
+                width:90%;
+                max-height:100vh;
+            }
+            #contained2 h1{
+                text-align: center;
+            }
+            #contained2 p{
+                line-height:20px;
+                text-indent: 40px;
+                padding-right: 2.5%;
+                padding-left: 2.5%;
+            }
+            #contained2 ul, #contained2 ol{
+                display:block;
+                padding-left: 6%;
+                padding-right: 2.5%;
+            }
+            #contained2 img{
+                display:block;
+                margin:auto;
+            }
+            h1, h2, h3, h4{
+                text-decoration: underline;
+                font-weight: bold;
+                padding-right: 2.5%;
+                padding-left: 2.5%;
+            }
+            h4{
+                font-style: italic;
+            }
+            #contained2 div{
+                padding-bottom: 1%;
+                box-sizing: border-box;
+                z-index:3;
+            }
+            .obj-or-pro{
+                background-color: rgba(28, 207, 231, 0.534);
+            }
+            .struct-pro{
+                background-color: rgba(193, 69, 224, 0.534);
+            }
+            .differences{
+                background-color: rgba(61, 231, 45, 0.534);
+            }
+            .Further-information{
+                background-color: rgba(247, 185, 51, 0.534);
+            }
+            #further-info{
+                column-count: 2;
+                text-align: center;
+                list-style: none;
+                font-weight: bold;
+            }
+            .further-info{
+                padding-bottom: 2ex;
+                text-align: center;
+            }
+            .fi-span{
+                text-decoration: underline;
+                font-size: 20px;
+            }
+            @media screen and (max-width:1200px){
+                .nav{
+                    padding-top: 2.1%;
+                }
+                #title{
+                    padding-top:1%;
+                }
+                #Logo{
+                    padding-top:45%;
+                }
+                #contained1{
+                    margin-top:20vh;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img id="obj-or-pro-vs-struc-pro-img" src="https://www.roberthalf.com/sites/default/files/2018-03/Object%20oriented%20programming.jpg" alt="Illustrative image which says: Object oriented programming">
+            <nav>
+                <a href="#obj-or-pro" class="nav">Object oriented<br>programming </a>
+                <a href="#struct-pro" class="nav">Structured<br>programming </a>
+                <a href="#" class="nav" id="title"><div>Object oriented programming<br>vs<br>structured programming </div></a>
+                <a href="#differences" class="nav">Differences<br>between them</a>
+                <a href="#Further-information" class="nav">Further<br>information</a>
+            </nav>
+            <div id="header-right-side">
+                <img id="Logo" src = "https://alejandrodefranciscouceda.github.io/Logotipo(con-fondo-negro).png" alt="logotype of Alejandro de Francisco">
+            </div>
+            <div id="header-left-side">
+            <a href="https://alejandrodefranciscouceda.github.io">Index</a>
+            </div>
+        </header>
+        <div id="container">
+            <div id="contained1">
+                <div id="contained2">
+                    <div class="obj-or-pro">
+                        <h1 id="obj-or-pro">Oject oriented programming</h1>
+                            <p><strong>Object oriented programming (OOP)</strong> is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).</p>
+                            <p>In OOP, computer programs are designed by making them out of objects that interact with one another.</p>
+                            <img src="https://pediaa.com/wp-content/uploads/2019/06/Difference-Between-Structured-and-Object-Oriented-Programming_Figure-2-768x537.png" width="25%">
+                            <p>In addition to classes and objects, there are four major pillars in OOP:</p>
+                            
+                            <ul>
+                                <li><strong>Encapsulation</strong>: Binds or combines properties and methods into a single unit.</li>
+                                <li><strong>Inheritance</strong>: Allows a class to use properties and methods of an already existing class.</li>
+                                <li><strong>Polymorphism</strong>: Allows an object to perform in multiple ways – Overloading and overriding are two ways of achieving polymorphism.</li>
+                                <li><strong>Abstraction</strong>: Hides the internal details and displays only the functionalities to the user – Moreover, abstract classes and interfaces help to achieve abstraction.</li>
+                            </ul>
+                            <p>Overall, object oriented programming makes it easier to develop the program. Furthermore, it provides data security, maintainability and code reusability.</p>
+                    </div>
+                    <div class="struct-pro">
+                        <h1 id="struct-pro">Structured programming</h1>
+                            <p>Structured programming is a programming paradigm aimed at improving the clarity, quality, and development time of a computer program by making extensive use of the structured control flow constructs of selection (if/then/else) and repetition (while and for), block structures, and subroutines.</p>
+                            <p>Structured Programming divides a program into a set of functions or modules which have statements embraced inside curly braces and each of them perfom a subtask. Usually, as each function represents a specific functionality, it is easier for the programmer to test and debug the code, but this can differ depending on the program.</p>
+                            <img src="https://pediaa.com/wp-content/uploads/2019/06/Difference-Between-Structured-and-Object-Oriented-Programming_Figure-1-768x137.jpg" width="50%">
+                            <p>In the structured programming C, the user can create his own user-defined functions. The main function calls the other functions and indicates the execution of the program. When there is a function call, the control is passed to that function. After completing the function, the control passes back to the main program. Moreover, a variable inside a function is a local variable, and global variables are accessible by all the functions.</p>
+                    </div>
+                    <div class="differences">
+                        <h1 id="differences">Differences between them</h1>
+                        <img src="https://pediaa.com/wp-content/uploads/2019/06/Difference-Between-Structured-and-Object-Oriented-Programming-Comparison-Summary-579x1024.jpg" width="25%" style="float:right; padding-right: 1%;">
+                        <div style="width:75%;">
+                            <h2>Definition</h2>
+                                <p>Structured programming is a programming paradigm which divides the code into modules or function, while OOP is a programming paradigm based on the concept of objects, which contain data in the form of fields known as attributes, and code in the form of procedures known as methods.</p>
+                            <h2>Main focus</h2>
+                                <p>Structured programming focuses on dividing the program into a set of functions in which each function works as a subprogram while object oriented programming focuses on representing a program using a set of objects which encapsulates data and object.</p>
+                            <h2>Modification</h2>
+                                <p>It is easier to modify the Object Oriented programs than structured programs.</p>
+                                <h2>Communication</h2>
+                                    <p>In structured programming, the main method communicates with the functions by calling those functions in the main program whereas, in object oriented programming, the objects communicate with each other by passing messages. Hence, this is an important difference between structured and object oriented programming.</p>
+                            <h2>Access specifiers</h2>
+                                <p>There are no access specifiers in structured programming while there are access specifiers such as private, public and protected in Object Oriented Programming. Thus, this is also an important  difference between structured and object oriented programming.</p>
+                            <h2>Security</h2>
+                                <p>Data is not secure in structured programming, but it is secure in object oriented programming.</p>
+                            <h2>Code reusability</h2>
+                                <p>It is easier to reuse code in object oriented programming than in structured porgramming.</p>
+                        </div>
+                    </div>
+                    <div class="Further-information">
+                        <h1 id="Further-information">Futher information</h1>
+                        <ul id="further-info">
+                            <li>
+                                <span class="fi-span"><a target ="_blank"href="https://wikipedia.org" style="color:white;">Wikipedia</a></span><br><br>
+                                <ul class="further-info">
+                                    <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object oriented programming</a></li>
+                                    <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/Structured_programming">Structured programming</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="fi-span"><a target ="_blank"href="https://pediaa.com" style="color:white;">PEDIAA</a></span><br><br>
+                                <ul class="further-info">
+                                    <li class="further-info"><a target="_blank" href="https://pediaa.com/what-is-the-difference-between-structured-and-object-oriented-programming">Difference Between Structured and Object Oriented Programming</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
