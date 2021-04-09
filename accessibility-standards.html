@@ -13,6 +13,7 @@
                 overflow-y:hidden;               
             }
             header{
+                display: block;
                 background-image: url(https://carteleriaxxl.es/wp-content/uploads/2019/01/fondo-fotografico-textura-pizarra-negro-diseno.jpg);
                 border-radius:0px 0px 8px 8px;
                 box-sizing: border-box;
@@ -38,6 +39,8 @@
             nav{
                 display:flex; 
                 justify-content: space-around;
+                align-items: center;
+                text-align: center;
                 margin-top:0.15%;
             }
             nav a{
@@ -50,10 +53,10 @@
                 margin-right:1%;
                 margin-left:1%;
                 padding-top: 1.5%;
-                padding-bottom: 1%;
+                padding-bottom: 1.25%;
                 padding-left: 2%;
                 padding-right: 2%;
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: bold;
                 border-radius: 8px;
                 overflow: hidden;
@@ -120,12 +123,6 @@
                 color:white;
                 background-color: rgb(47, 152, 223);
             }
-            #Index{
-                position: relative; 
-                left: 4%; 
-                top: 1%; 
-                justify-content:center;
-            }
             #container{
                 display:flex;
                 color:rgb(0, 0, 0);
@@ -150,6 +147,11 @@
                 width:90%;
                 max-height:100vh;
             }
+            #contained2 div{
+                padding-bottom: 1%;
+                box-sizing: border-box;
+                z-index:3;
+            }
             #container h1{
                 text-align: center;
             }
@@ -159,7 +161,9 @@
                 padding-right: 2.5%;
                 padding-left: 2.5%;
             }
-            #container li{
+            #container ul, #container ol{
+                display:block;
+                padding-left: 6%;
                 padding-right: 2.5%;
             }
             h1, h2, h3, h4{
@@ -207,7 +211,7 @@
                     padding-top:1%;
                 }
                 #contained1{
-                    margin-top:12vh;
+                    margin-top:22%;
                 }
             }
         </style>
