@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Digital signature - Alex's website</title>
+        <link rel="shortcut icon" href="https://alejandrodefranciscouceda.github.io/Logotipo(con-fondo-negro).png">
+        <style>
+            body{
+                margin-top:0px;
+                background-image: url(https://www.xtrafondos.com/wallpapers/resoluciones/19/geometria-3d_1920x1080_3586.jpg);
+                font-family: "Times New Roman", monospace;
+                overflow-x: hidden;
+                overflow-y:hidden;               
+            }
+            header{
+                display: block;
+                background-image: url(https://us.123rf.com/450wm/pk74/pk741503/pk74150300030/37479543-lapis-azules-seamless-textura-de-piedra-lapisl%C3%A1zuli-ilustraci%C3%B3n.jpg?ver=6);
+                border-radius:0px 0px 8px 8px;
+                box-sizing: border-box;
+                padding-bottom: 0.75%;
+                width: 76%;
+                position: fixed;
+                left: 12%;
+                z-index:1;
+            }
+            header img{
+                width: 14%;
+            }
+            header a {
+                text-decoration: none;
+                color: white;
+                text-align: center;
+            }
+            #digital-siganture-img{
+                display: block; 
+                margin:auto;
+                width: 7%;
+            }
+            nav{
+                display:flex; 
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                margin-top:0.15%;
+            }
+            nav a{
+                text-decoration:none;
+            }
+            .nav{
+                color:rgb(255, 255, 255);
+                margin-top:0%;
+                margin-bottom:0.5%;
+                margin-right:1%;
+                margin-left:1%;
+                padding-top: 1.5%;
+                padding-bottom: 1.25%;
+                padding-left: 2%;
+                padding-right: 2%;
+                font-size: 17px;
+                font-weight: 800;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            #title{
+                padding-top:1%;
+                color:rgb(0, 255, 234);
+                font-size: 20px;
+                text-align: center;
+                display:inline;
+            }
+            #title:hover, #title:focus{
+                background-color: rgb(0, 0, 0);
+            }
+            header a:hover, header a:focus{
+                color:rgb(16, 8, 138);
+                background-color: white;
+            }
+            header a:active{
+                border:4px outset rgb(247, 166, 45);
+            }
+            #header-right-side{
+                background-image: url(https://img.freepik.com/foto-gratis/textura-marmol-blanco-fondo-abstracto_28586-1427.jpg?size=626&ext=jpg);
+                border-radius:0px 0px 0px 8px;
+                box-sizing: border-box;
+                padding-bottom: 5%;
+                width: 16.5%;
+                height:100%;
+                float:right;
+                position: absolute;
+                right: -18%;
+                top:0%;
+                text-align:center;
+            }
+            #Logo{
+                padding-top:20%;
+                width:50%;
+                border-radius:8px;
+            }
+            #header-left-side{
+                background-image: url(https://img.freepik.com/foto-gratis/textura-marmol-blanco-fondo-abstracto_28586-1427.jpg?size=626&ext=jpg);
+                border-radius:0px 0px 8px 0px;
+                box-sizing: border-box;
+                width: 20%;
+                height:100%;
+                position: absolute;
+                left: -22%;
+                top:0%;
+                text-align: center;
+                margin:auto;
+                box-sizing: border-box;
+                padding-top: 5%;
+                padding-left: 2%;
+                font-family: "times new roman", monospace;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            #header-left-side a{
+                border-radius: 8px;
+                padding:7%;
+                margin-left:8%;
+                color: black;
+            }
+            #header-left-side a:hover{
+                color:white;
+                background-color: rgb(16, 8, 138);
+            }
+            #container{
+                display:flex;
+                color:rgb(255, 255, 255);
+                font-weight: 400;
+                font-size: 20px;
+                width: 100%;
+                max-height:100vh;
+                text-align: center;
+                justify-content:center;
+                box-sizing:border-box;
+                z-index:2;
+            }
+            #contained1{
+                display:flex;
+                justify-content:center;
+                width:100%;
+                text-align: justify;
+                margin-top:12%;
+                overflow-y: scroll;               
+            }
+            #contained2{
+                width:90%;
+                max-height:100vh;
+            }
+            #contained2 h1{
+                text-align: center;
+            }
+            #contained2 p{
+                line-height:20px;
+                text-indent: 40px;
+                padding-right: 2.5%;
+                padding-left: 2.5%;
+            }
+            #contained2 ul, #contained2 ol{
+                display:block;
+                padding-left: 6%;
+                padding-right: 2.5%;
+            }
+            #contained2 img, #contained2 iframe{
+                display:block;
+                margin:auto;
+            }
+            h1{
+                text-decoration: underline;
+                font-weight: bold;
+                padding-right: 2.5%;
+                padding-left: 2.5%;
+            }
+            #contained2 div{
+                padding-bottom: 1%;
+                box-sizing: border-box;
+                z-index:3;
+            }
+            .two-or-plus-videos{
+                column-count: 2;
+                list-style: none;
+            }
+            .two-or-plus-videos li{
+                padding-top: 1%;
+                padding-bottom: 2%;
+            }
+            .what-is{
+                background-color: rgba(255, 255, 255, 0.534);
+                color:black;
+            }
+            .how-work{
+                background-color:  rgba(166, 81, 245, 0.534);
+            }
+            .how-to-sign{
+                background-color: rgba(130, 243, 187, 0.534);
+            }
+            .Further-information{
+                background-color: rgba(247, 185, 51, 0.534);
+            }
+            #further-info{
+                column-count: 2;
+                text-align: center;
+                list-style: none;
+                font-weight: bold;
+            }
+            .further-info{
+                padding-bottom: 2ex;
+                text-align: center;
+                list-style:none;
+            }
+            .fi-span{
+                text-decoration: underline;
+                font-size: 20px;
+            }
+            @media screen and (max-width:1200px){
+                .nav{
+                    padding-top: 2.1%;
+                }
+                #title{
+                    padding-top:1%;
+                }
+                #Logo{
+                    padding-top:45%;
+                }
+                #contained1{
+                    margin-top:20vh;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img id="digital-siganture-img" src="https://www.smartdatacollective.com/wp-content/uploads/2019/05/digital-signature-data.jpg" alt="Illustrative image which says: Object oriented programming">
+            <nav>
+                <a href="#what-is" class="nav">What is a<br>digital siganture?</a>
+                <a href="#how-work" class="nav">How do digital<br>sigantures work?</a>
+                <a href="https://alejandrodefranciscouceda.github.io/digital-siganture.html" class="nav" id="title"><div>Digital<br>siganture</div></a>
+                <a href="#how-to-sign" class="nav">How to sign a<br>document digitally</a>
+                <a href="#Further-information" class="nav">Further<br>information</a>
+            </nav>
+            <div id="header-right-side">
+                <img id="Logo" src = "https://alejandrodefranciscouceda.github.io/Logotipo(con-fondo-negro).png" alt="logotype of Alejandro de Francisco">
+            </div>
+            <div id="header-left-side">
+            <a href="https://alejandrodefranciscouceda.github.io">Index</a>
+            </div>
+        </header>
+        <div id="container">
+            <div id="contained1">
+                <div id="contained2">
+                    <div class="what-is">
+                        <h1 id="what-is">What is a <em>digital siganture</em>?</h1>
+                        <img src="https://www.thesslstore.com/blog/wp-content/uploads/2019/08/Digital-Signature-Feature.png" width="25%">
+                        <p>A digital signature is a mathematical scheme for verifying the authenticity of digital messages or documents. A valid digital signature, where the prerequisites are satisfied, gives a recipient very strong reason to believe that the message was created by a known sender (authentication), and that the message was not altered in transit (integrity).</p>
+                        <p>Digital signatures are a standard element of most cryptographic protocol suites, and are commonly used for software distribution, financial transactions, contract management software, and in other cases where it is important to detect forgery or tampering.</p>
+                    </div>
+                    <div class="how-work">
+                        <h1 id="how-work">How do <em>digital signatures</em> work?</h1>
+                            <p>A digital signature scheme typically consists of three algorithms:</p>
+                            <ul>
+                                <li>A <strong>key generation</strong> algorithm that selects a private key uniformly at random from a set of possible private keys. The algorithm outputs the private key and a corresponding public key.</li>
+                                <li>A <strong>signing algorithm</strong> that, given a message and a private key, produces a signature.</li>
+                                <li>A <strong>signature verifying algorithm</strong> that, given the message, public key and signature, either accepts or rejects the message's claim to authenticity.</li>
+                            </ul>
+                            <p>In the two videos below it is explained its functioning:</p>
+                            <ul class="two-or-plus-videos">
+                                <li>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JR4_RBb8A9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                                <li>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/704dudhA7UI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="how-to-sign">
+                        <h1 id="how-to-sign">How to sign a document digitally</h1>
+                            <p>In order to sign digitally a document, it is necessary to have an electronic ID, which contain the crytographic passwords necessary to sign and to idetnify the signer. They can be obtained arranging an appointment in an official office in which Ids are made or renewed. For example this one in Murcia:</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d786.0983443410186!2d-1.1357396658906418!3d37.991283973784206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6381f5a5a10a5d%3A0xad80f83b231bb712!2sOficina%20tramitaci%C3%B3n%20DNI%20y%20Pasaporte%3B%20tlf.%3A%20060!5e0!3m2!1ses!2ses!4v1617983608744!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <p>The process of signing a document can be done in two different ways depending on which application the user decides to sign:</p>
+                            <ul>
+                                <li><strong>Downloading an application</strong> to sign documents directly on your computer so that tere is no need of internet conexion to sign a document. In Spain, the official application tu use is <em>AutoFirma</em></li>
+                                <li><strong>Signing directly on the Internet</strong>. This options is used when you need to sign a form or an application. You only need to download a plug-in offered by VALIDe, which works on the same browser, to sign documents on the Internet.</li>
+                            </ul>
+                            <p>To know more about these applications click <em><a target="_blank" href="https://firmaelectronica.gob.es/Home/Ciudadanos/Aplicaciones-Firma.html#autofirma">here</a></em>.</p>
+                            <p>As examples, in these videos in Spanish it can be seen how to sign a document digitally with both programs, witch Adobe Acrobat and how to intall your certificate in a computer:</p>
+                            <ul class="two-or-plus-videos">
+                                <li>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ktbt8Dbyduk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                                <li>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iaTp0CzSYbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                                <li>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LWsae6KRTQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                                <li>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-ufcxGSOYOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="Further-information">
+                        <h1 id="Further-information">Futher information</h1>
+                        <ul id="further-info">
+                            <li>
+                                <span class="fi-span"><a target ="_blank"href="https://wikipedia.org" style="color:white;">Wikipedia</a></span><br><br>
+                                <ul class="further-info">
+                                    <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/Digital_signature">Digital siganture</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="fi-span"><a target ="_blank" href="https://firmaelectronica.gob.es" style="color:white;">Portal de Administración electrónica</a></span><br><br>
+                                <ul class="further-info">
+                                    <li class="further-info"><a target="_blank" href="https://firmaelectronica.gob.es/Home/Ciudadanos/Firma-Electronica.html">La Firma electrónica</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
