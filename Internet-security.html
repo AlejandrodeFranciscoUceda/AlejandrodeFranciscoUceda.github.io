@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Internet security - Alex's website</title>
+        <link rel="shortcut icon" href="https://alejandrodefranciscouceda.github.io/Logotipo(con-fondo-negro).png">
+        <style>
+            body{
+                margin-top:0px;
+                background-image: url(https://static.vecteezy.com/system/resources/previews/002/124/491/original/cyber-technology-security-network-protection-background-design-illustration-free-vector.jpg);
+                font-family: "Times New Roman", monospace;
+                overflow-x: hidden;
+                overflow-y:hidden;               
+            }
+            header{
+                display: block;
+                background-image: url(https://media.istockphoto.com/photos/obsidian-picture-id471944372?k=6&m=471944372&s=612x612&w=0&h=nOh6PwUfty4bq9HbOSI7SPBltVGp-XxcctW0LmtoF3A=);                border-radius:0px 0px 8px 8px;
+                box-sizing: border-box;
+                padding-bottom: 0.75%;
+                width: 76%;
+                position: fixed;
+                left: 12%;
+                z-index:1;
+            }
+            header img{
+                width: 18%;
+            }
+            header a {
+                text-decoration: none;
+                color: white;
+                text-align: center;
+            }
+            #digital-siganture-img{
+                display: block; 
+                margin:auto;
+                width: 7%;
+            }
+            nav{
+                display:flex; 
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                margin-top:0.15%;
+            }
+            nav a{
+                text-decoration:none;
+            }
+            .nav{
+                color:rgb(255, 255, 255);
+                margin-top:0%;
+                margin-bottom:0.5%;
+                margin-right:1%;
+                margin-left:1%;
+                padding-top: 1.5%;
+                padding-bottom: 1.25%;
+                padding-left: 2%;
+                padding-right: 2%;
+                font-size: 17px;
+                font-weight: 800;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            #title{
+                padding-top:1%;
+                color:rgb(60, 255, 0);
+                font-size: 20px;
+                text-align: center;
+                display:inline;
+            }
+            #title:hover, #title:focus{
+                background-color: rgb(0, 0, 0);
+            }
+            header a:hover, header a:focus{
+                color:rgb(16, 8, 138);
+                background-color: white;
+            }
+            header a:active{
+                border:4px outset rgb(60, 255, 0);
+            }
+            #header-right-side{
+                background-image: url(https://img.freepik.com/foto-gratis/textura-marmol-blanco-fondo-abstracto_28586-1427.jpg?size=626&ext=jpg);
+                border-radius:0px 0px 0px 8px;
+                box-sizing: border-box;
+                padding-bottom: 5%;
+                width: 16.5%;
+                height:100%;
+                float:right;
+                position: absolute;
+                right: -18%;
+                top:0%;
+                text-align:center;
+            }
+            #Logo{
+                padding-top:20%;
+                width:50%;
+                border-radius:8px;
+            }
+            #header-left-side{
+                background-image: url(https://img.freepik.com/foto-gratis/textura-marmol-blanco-fondo-abstracto_28586-1427.jpg?size=626&ext=jpg);
+                border-radius:0px 0px 8px 0px;
+                box-sizing: border-box;
+                width: 20%;
+                height:100%;
+                position: absolute;
+                left: -22%;
+                top:0%;
+                text-align: center;
+                margin:auto;
+                box-sizing: border-box;
+                padding-top: 5%;
+                padding-left: 2%;
+                font-family: "times new roman", monospace;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            #header-left-side a{
+                border-radius: 8px;
+                padding:7%;
+                margin-left:8%;
+                color: black;
+            }
+            #header-left-side a:hover{
+                color:white;
+                background-color: rgb(16, 8, 138);
+            }
+            #container{
+                display:flex;
+                color:rgb(255, 255, 255);
+                font-weight: 400;
+                font-size: 20px;
+                width: 100%;
+                max-height:100vh;
+                text-align: center;
+                justify-content:center;
+                box-sizing:border-box;
+                z-index:2;
+            }
+            #contained1{
+                display:flex;
+                justify-content:center;
+                width:100%;
+                text-align: justify;
+                margin-top:12%;
+                overflow-y: scroll;               
+            }
+            #contained2{
+                width:90%;
+                max-height:100vh;
+            }
+            #contained2 h1{
+                text-align: center;
+            }
+            #contained2 p{
+                line-height:20px;
+                text-indent: 40px;
+                padding-right: 2.5%;
+                padding-left: 2.5%;
+            }
+            #contained2 ul, #contained2 ol{
+                display:block;
+                padding-left: 6%;
+                padding-right: 2.5%;
+            }
+            #contained2 img, #contained2 iframe{
+                display:block;
+                margin:auto;
+            }
+            h1, h2{
+                text-decoration: underline;
+                font-weight: bold;
+                padding-right: 2.5%;
+                padding-left: 2.5%;
+            }
+            #contained2 div{
+                padding-bottom: 1%;
+                box-sizing: border-box;
+                z-index:3;
+            }
+            table{
+                display:block;
+                margin:auto;
+                text-align: justify;
+                border-collapse: separate;
+                background-color: white;
+                border-radius: 8px;
+                width:50%;
+            }
+            table td, table th {
+                padding:2%;
+                text-align: center;
+            }
+            .active-attack{
+                background-color: rgb(255, 97, 97);
+            }
+            .active-attack-two{
+                background-color: rgb(255, 174, 174);
+            }
+            .passive-attack{
+                background-color: rgb(102, 105, 255);
+            }
+            .passive-attack-two{
+                background-color: rgb(162, 164, 255);
+            }
+            table thead{
+                text-align: center;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+            .two-or-plus-videos{
+                column-count: 2;
+                list-style: none;
+            }
+            .two-or-plus-videos li{
+                padding-top: 1%;
+                padding-bottom: 2%;
+            }
+            iframe{
+                border:none;
+                padding:2%;
+            }
+            img{
+                width:30%;
+            }
+            .differemce-activ-pass-secur-threats{
+                background-color: rgba(253, 128, 190, 0.534);
+            }
+            .malware{
+                background-color: rgba(253, 128, 190, 0.534);
+            }
+            .soft-and-hardw-to-protect-networks{
+                background-color: rgba(253, 128, 190, 0.534); 
+            }
+            .network-protocols{
+                background-color: rgba(253, 128, 190, 0.534);
+            }
+            .digit-certi-and-cert-authori{
+                background-color: rgba(253, 128, 190, 0.534);
+            }
+            .Further-information{
+                background-color: rgba(247, 185, 51, 0.534);
+            }
+            .further-info{
+                padding-bottom: 2ex;
+                text-align: center;
+                list-style:none;
+            }
+            .fi-span{
+                text-decoration: underline;
+                font-size: 20px;
+                text-align: center;
+            }
+            @media screen and (max-width:1200px){
+                .nav{
+                    padding-top: 2.1%;
+                }
+                #title{
+                    padding-top:1%;
+                }
+                #Logo{
+                    padding-top:45%;
+                }
+                #contained1{
+                    margin-top:20vh;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img id="digital-siganture-img" src="https://laradioahora.com/wp-content/uploads/2020/08/bigstock-Internet-Security-Firewall-Or-326464240_1024X684.png" alt="Illustrative image for Internet sceurity">
+            <nav>
+                <a href="#differemce-activ-pass-secur-threats" class="nav">Difference between<br>passive and active<br>security threats</a>
+                <a href="#malware" class="nav">Malware</a>
+                <a href="#soft-and-hardw-to-protect-networks" class="nav">Software and<br>hardware to<br>protect networks</a>
+                <a href="https://alejandrodefranciscouceda.github.io/Internet-security.html" class="nav" id="title"><div>Internet<br>security</div></a>
+                <a href="#network-protocols" class="nav">Networks<br>protocols</a>
+                <a href="#digit-certi-and-cert-authori" class="nav">Digital certificates<br>and<br>certificate authorities</a>
+                <a href="#Further-information" class="nav">Further<br>information</a>
+            </nav>
+            <div id="header-right-side">
+                <img id="Logo" src = "https://alejandrodefranciscouceda.github.io/Logotipo(con-fondo-negro).png" alt="logotype of Alejandro de Francisco" alt="logotype of Alejandro de Francisco">
+            </div>
+            <div id="header-left-side">
+            <a href="https://alejandrodefranciscouceda.github.io">Index</a>
+            </div>
+        </header>
+        <div id="container">
+            <div id="contained1">
+                <div id="contained2">
+                    <div class="differemce-activ-pass-secur-threats">
+                        <h1 id="differemce-activ-pass-secur-threats">Diffrence between active and passive security threats</h1>
+                            <h2>Active security threats</h2>
+                                <p><em>Active security threats</em> or <strong>active attacks</strong> are the type of attacks in which the attacker efforts to change or modify the content of messages. Active Attack is danger for Integrity as well as availability. Due to active attack system is always damaged and System resources can be changed. The most important thing is that, In active attack, Victim gets informed about the attack.</p>
+                                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190521143059/Untitled-Diagram-261.png" alt="Illustrative image of how an active security threat works">
+                            <h2>Passive security threats</h2>
+                                <p><em>Passive security threats</em> or <strong>passive attacks</strong> are the type of attacks in which the attacker observes the content of messages or copy the content of messages. Passive Attack is danger for Confidentiality. Due to passive attack, there is no any harm to the system. The most important thing is that In passive attack, Victim does not get informed about the attack.</p>
+                                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190521143129/Untitled-Diagram-271.png" alt="Illustrative image of how a passive security threat works">
+                            <h2>Comparison between them</h2>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="active-attack">Active Attack</th>
+                                            <th class="passive-attack">Passive Attack</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="active-attack-two">Modification in information take place.</td>
+                                            <td class="passive-attack-two">Modification in the information does not take place.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active-attack">Danger for <strong>Integrity</strong> as well as <strong>availability</strong></td>
+                                            <td class="passive-attack">Danger for <strong>Confidentiality</strong>.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active-attack-two">Attention is on detection.</td>
+                                            <td class="passive-attack-two">Attention is on prevention.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active-attack">System is always damaged.</td>
+                                            <td class="passive-attack">There is no any harm to the system.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active-attack-two">Victim gets informed about the attack.</td>
+                                            <td class="passive-attack-two">Victim does not get informed about the attack.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active-attack">System resources can be changed.</td>
+                                            <td class="passive-attack">System resources are not changed.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active-attack-two">Influence the services of the system.</td>
+                                            <td class="passive-attack-two">Information and messages in the system or network are acquired.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active-attack">Information collected through passive attacks are used during executing.</td>
+                                            <td class="passive-attack">Attack is performed by collecting the information such as passwords, messages by itself.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active-attack-two">Active attack is tough to restrict from entering systems or networks.</td>
+                                            <td class="passive-attack-two">Passive Attack is easy to prohibited in comparison to active attack.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/mZZYeCZvOco" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="malware">
+                        <h1 id="malware">Malware</h1>
+                            <h2>Worms</h2>
+                                <p>A computer worm is a standalone malware computer program that replicates itself in order to spread to other computers. It often uses a computer network to spread itself, relying on security failures on the target computer to access it. It will use this machine as a host to scan and infect other computers. When these new worm-invaded computers are controlled, the worm will continue to scan and infect other computers using these computers as hosts, and this behaviour will continue. Computer worms use recursive methods to copy themselves without host programs and distribute themselves based on the law of exponential growth, thus controlling and infecting more and more computers in a short time. Worms almost always cause at least some harm to the network, even if only by consuming bandwidth, whereas viruses almost always corrupt or modify files on a targeted computer.</p>
+                                <p>Many worms are designed only to spread, and do not attempt to change the systems they pass through. However, as the Morris worm and Mydoom showed, even these "payload-free" worms can cause major disruption by increasing network traffic and other unintended effects.</p>
+                                <p>Depending on the type of worm and your security measures, they can do serious damage. These parasitic nasties can:</p>
+                                <ul>
+                                    <li>Modify and delete files.</li>
+                                    <li>Inject malicious software onto computers.</li>
+                                    <li>Replicate themselves over and over to deplete system resources.</li>
+                                    <li>Steal your data.</li>
+                                    <li>Install a convenient backdoor for hackers.</li>
+                                </ul>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/oyUsZu6ygq8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                            <h2>Trojan horses</h2>
+                                <p>A Trojan horse (or simply trojan) is any malware which misleads users of its true intent. The term is derived from the Ancient Greek story of the deceptive Trojan Horse that led to the fall of the city of Troy.</p>
+                                <p>Trojans are generally spread by some form of social engineering, for example where a user is duped into executing an email attachment disguised to appear not suspicious, (e.g., a routine form to be filled in), or by clicking on some fake advertisement on social media or anywhere else. Although their payload can be anything, many modern forms act as a backdoor, contacting a controller which can then have unauthorized access to the affected computer.  Trojans may allow an attacker to access users' personal information such as banking information, passwords, or personal identity. It can also delete a user's files or infect other devices connected to the network. Ransomware attacks are often carried out using a trojan.</p>
+                                <p>Unlike computer viruses, worms, and rogue security software, trojans generally do not attempt to inject themselves into other files or otherwise propagate themselves, but need a host to work. Once you’ve got the Trojan on your device, hackers can use it to:</p>
+                                <ul>
+                                    <li>Delete, modify and capture data.</li>
+                                    <li>Harvest your device as part of a botnet.</li>
+                                    <li>Spy on your device.</li>
+                                    <li>Gain access to your network.</li>
+                                </ul>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/pzOM8sc2RPU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                            <h2>Viruses</h2>
+                                <p>A computer virus is a type of computer program that, when executed, replicates itself by modifying other computer programs and inserting its own code. If this replication succeeds, the affected areas are then said to be "infected" with a computer virus.</p>
+                                <p>Computer viruses generally require a host program. The virus writes its own code into the host program. When the program runs, the written virus program is executed first, causing infection and damage. A computer worm does not need a host program, as it is an independent program or code chunk. Therefore, it is not restricted by the host program, but can run independently and actively carry out attacks.</p>
+                                <p>Computer viruses cause billions of dollars' worth of economic damage each year.</p>
+                                <p>They are usually spread via infected websites, file sharing, or email attachment downloads, a virus will lie dormant until the infected host file or program is activated. Once that happens, the virus is able to replicate itself and spread through your systems.</p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/qNodotqsUgg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                            <h2>Spyware</h2>
+                                <p>Spyware describes software with malicious behavior that aims to gather information about a person or organization and send such information to another entity in a way that harms the user; for example by violating their privacy or endangering their device's security. This behavior may be present in malware as well as in legitimate software. Websites may engage in spyware behaviors like web tracking. Hardware devices may also be affected.</p>
+                                <p>Spyware is a common threat, usually distributed as freeware or shareware that has an appealing function on the front end with a covert mission running in the background that you might never notice. It’s often used to carry out identity theft and credit card fraud.</p>
+                                <p>Once on your computer, spyware relays your data to advertisers or cyber criminals. Some spyware installs additional malware that make changes to your settings.</p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/-Z3pp14oUiA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="soft-and-hardw-to-protect-networks">
+                        <h1 id="soft-and-hardw-to-protect-networks">Sowfware and hardware to protect networks</h1>
+                            <p>Network security is any practice or tool designed and implemented to secure a network and its data. It includes software, hardware, and cloud solutions. Effective network security tools stop a wide range of cyberattacks, and prevent attacks spreading throughout the network in case of a data breach.</p>
+                            <p>In today’s cyber environment, every organization must implement network security processes and solutions to maintain the uptime of their online resources. All network security solutions are implemented in accordance with the core principles of network security.</p>
+                            <p>Some methods toprotect the Network are:</p>
+                            <h2>Anti-Virus and Anti-Malware</h2>
+                                <p>Anti-virus and anti-malware protect networks from malicious software that is used by threat actors to create a backdoor that they can use to further infiltrate the network. It’s important to note that while there are similarities between anti-virus and anti-malware programs, they are not exactly the same.</p>
+                                <ul>
+                                    <li><strong>Anti-Virus</strong>: Prevention-based, protects networks by proactively stopping endpoint devices from becoming infected.</li>
+                                    <li><strong>Anti-Malware</strong>: Treatment-based, protects networks by detecting and destroying malicious programs that have infiltrated the network.</li>
+                                </ul>
+                            <h2>Application Security</h2>
+                                <p>Application security ensures that the software used throughout the network is secure. Application security is ensured by limiting the amount of software that is used, ensuring that software is kept up-to-date with the latest security patches and that applications developed for use in the network are appropriately hardened against potential exploits.</p>
+                            <h2>Behavioral Analytics</h2>
+                                <p>Behavioral analytics is an advanced threat detection method that compares historical network activity data to current events in an effort to detect anomalous behavior. An example of this would be if a user typically uses a given endpoint device to access a specific database somewhere between 3-4 times per day on average, an instance where that user instead uses a new endpoint device to access a different database several times would be flagged for review.</p>
+                            <h2>DDoS Prevention</h2>
+                                <p>Distributed denial-of-service (DDoS) attacks attempt to crash the network by overloading it with a large influx of incoming connection requests. DDoS prevention solutions analyze incoming requests to identify and filter out illegitimate traffic in an effort to maintain the network’s accessibility for legitimate connections.</p>
+                                <p>This video explains what are DDoS:</p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ilhGh9CEIwM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <h2>Data Loss Prevention (DLP)</h2>
+                                <p>Data loss prevention (DLP) tools protect the data inside a network by preventing users from sharing sensitive or valuable information outside of the network and ensuring that data is not lost or misused. This can be accomplished by analyzing files that are sent via email, file transfers, and instant messages for data that is considered to be sensitive, such as personally identifiable information (PII).</p>
+                            <h2>Email Security</h2>
+                                <p>Email security measures protect networks from phishing attacks that attempt to trick users into clicking links to malicious websites or downloading seemingly innocent attachments that introduce malware into the network. Email security tools proactively fight phishing by identifying suspicious emails and filtering them out before they reach the user’s inbox.</p>
+                            <h2>Endpoint Security</h2>
+                                <p>Endpoint security protects networks by ensuring that the devices that will be connected to the network are secured against potential threats. Endpoint security is achieved alongside network security by combining several other network security tools such as network access control, application security, and network monitoring.</p>
+                            <h2>Firewalls</h2>
+                                <p>Firewalls are hardware appliances and software programs that act as a barrier between incoming traffic and the network. The firewall compares data packets that are sent over the network to predefined policies and rules that indicate whether or not the data should be permitted into the network. </p>
+                                <p>This video expolains what a firewall is:</p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/kDEX1HXybrU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="network-protocols">
+                        <h1 id="network-protocols">Network protocols</h1>
+                            <h2>SSL</h2>
+                                <p>Stands for "Secure Sockets Layer." SSL is a secure protocol developed for sending information securely over the Internet. Many websites use SSL for secure areas of their sites, such as user account pages and online checkout. Usually, when you are asked to "log in" on a website, the resulting page is secured by SSL.</p>
+                                <p>SSL encrypts the data being transmitted so that a third party cannot "eavesdrop" on the transmission and view the data being transmitted. Only the user's computer and the secure server are able to recognize the data. SSL keeps your name, address, and credit card information between you and merchant to which you are providing it. Without this kind of encryption, online shopping would be far too insecure to be practical. When you visit a Web address starting with "https," the "s" after the "http" indicates the website is secure. These websites often use SSL certificates to verify their authenticity.</p>
+                                <p>While SSL is most commonly seen on the Web (HTTP), it is also used to secure other Internet protocols, such as SMTP for sending e-mail and NNTP for newsgroups. Early implementations of SSL were limited to 40-bit encryption, but now most SSL secured protocols use 128-bit encryption or higher.</p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/hExRDVZHhig?start=222" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <h2>HTTPS</h2>
+                                <p>Hypertext Transfer Protocol Secure (HTTPS) is an extension of the Hypertext Transfer Protocol (HTTP). It is used for secure communication over a computer network, and is widely used on the Internet. n HTTPS, the communication protocol is encrypted using Transport Layer Security (TLS) or, formerly, Secure Sockets Layer (SSL). The protocol is therefore also referred to as HTTP over TLS, or HTTP over SSL.</p>
+                                <p>The principal motivations for HTTPS are authentication of the accessed website, and protection of the privacy and integrity of the exchanged data while in transit. It protects against man-in-the-middle attacks, and the bidirectional encryption of communications between a client and server protects the communications against eavesdropping and tampering.  The authentication aspect of HTTPS requires a trusted third party to sign server-side digital certificates. This was historically an expensive operation, which meant fully authenticated HTTPS connections were usually found only on secured payment transaction services and other secured corporate information systems on the World Wide Web. In 2016, a campaign by the Electronic Frontier Foundation with the support of web browser developers led to the protocol becoming more prevalent. HTTPS is now used more often by web users than the original non-secure HTTP, primarily to protect page authenticity on all types of websites; secure accounts; and to keep user communications, identity, and web browsing private.</p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/T4Df5_cojAs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <h2>IPv6</h2>
+                                <p>Internet Protocol version 6 (IPv6) is the most recent version of the Internet Protocol (IP), the communications protocol that provides an identification and location system for computers on networks and routes traffic across the Internet. IPv6 was developed by the Internet Engineering Task Force (IETF) to deal with the long-anticipated problem of IPv4 address exhaustion. IPv6 is intended to replace IPv4. In December 1998, IPv6 became a Draft Standard for the IETF,[2] who subsequently ratified it as an Internet Standard on 14 July 2017.</p>
+                                <p>Devices on the Internet are assigned a unique IP address for identification and location definition. With the rapid growth of the Internet after commercialization in the 1990s, it became evident that far more addresses would be needed to connect devices than the IPv4 address space had available. By 1998, the IETF had formalized the successor protocol. IPv6 uses a 128-bit address, theoretically allowing 2^128, or approximately 3.4×10^38 addresses. The actual number is slightly smaller, as multiple ranges are reserved for special use or completely excluded from use. The two protocols are not designed to be interoperable, and thus direct communication between them is impossible, complicating the move to IPv6. However, several transition mechanisms have been devised to rectify this.</p>
+                                <p>IPv6 provides other technical benefits in addition to a larger addressing space. In particular, it permits hierarchical address allocation methods that facilitate route aggregation across the Internet, and thus limit the expansion of routing tables. The use of multicast addressing is expanded and simplified, and provides additional optimization for the delivery of services. Device mobility, security, and configuration aspects have been considered in the design of the protocol.</p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/dItmYCnd_xQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="digit-certi-and-cert-authori">
+                        <h1 id="digit-certi-and-cert-authori">Digital certificates and certificate authorities</h1>
+                            <h2>Digital certificates</h2>
+                                <p>A <strong>public key certificate</strong>, also known as a digital certificate or identity certificate, is an electronic document used to prove the ownership of a public key. The certificate includes information about the key, information about the identity of its owner (called the subject), and the digital signature of an entity that has verified the certificate's contents (called the issuer). If the signature is valid, and the software examining the certificate trusts the issuer, then it can use that key to communicate securely with the certificate's subject. In email encryption, code signing, and e-signature systems, a certificate's subject is typically a person or organization. However, in Transport Layer Security (TLS) a certificate's subject is typically a computer or other device, though TLS certificates may identify organizations or individuals in addition to their core role in identifying devices. TLS, sometimes called by its older name Secure Sockets Layer (SSL), is notable for being a part of HTTPS, a protocol for securely browsing the web.</p>
+                                <p>In a typical public-key infrastructure (PKI) scheme, the certificate issuer is a certificate authority (CA), usually a company that charges customers to issue certificates for them. By contrast, in a web of trust scheme, individuals sign each other's keys directly, in a format that performs a similar function to a public key certificate.</p>
+                                <p>For more information see <a target="_blank" href="https://alejandrodefranciscouceda.github.io/digital-signature.html#how-work">How do <em>digital sigantures work</em>?</a></p>
+                            <h2>Certificate authorities</h2>
+                                <p>A certificate authority (CA), also sometimes referred to as a certification authority, is a company or organization that acts to validate the identities of entities (such as websites, email addresses, companies, or individual persons) and bind them to cryptographic keys through the issuance of electronic documents known as digital certificates. A digital certificate provides:</p>
+                                <ul>
+                                    <li><strong>Authentication</strong>, by serving as a credential to validate the identity of the entity that it is issued to.</li>
+                                    <li><strong>Encryption</strong>, for secure communication over insecure networks such as the Internet.</li>
+                                    <li><strong>Integrity</strong> of documents signed with the certificate so that they cannot be altered by a third party in transit.</li>
+                                </ul>
+                                <p>Some certificate authorities are</p>
+                                <ul>
+                                    <li>IdenTrust</li>
+                                    <li>DigiCert</li>
+                                    <li>Sectigo</li>
+                                    <li>GoDaddy</li>
+                                </ul>
+                    </div>
+                    <div class="Further-information">
+                        <h1 id="Further-information">Futher information</h1>
+                            <ul class="further-info">
+                                <li><span class="fi-span"><a target ="_blank"href="https://wikipedia.org" style="color:white;">Wikipedia</a></span><br><br></li>
+                                <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/Computer_worm">Computer worm</a></li>
+                                <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/Trojan_horse_(computing)">Trojan horse (computing)</a></li>
+                                 <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/Computer_virus">Computer virus</a></li>
+                                <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/Spyware">Spyware</a></li>
+                                <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/HTTPS">HTTPS</a></li>
+                                <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/IPv6">IPv6</a></li>
+                                <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/Public_key_certificate">Public key certificate</a></li>
+                                <li class="further-info"><a target="_blank" href="https://en.wikipedia.org/wiki/Certificate_authority">Certificate authority</a></li>
+                            </ul>
+                            <ul class="further-info">
+                                <li><span class="fi-span"><a target ="_blank" href="https://www.geeksforgeeks.org" style="color:white;">GeeksforGeeks</a></span><br><br></li>
+                                <li class="further-info"><a target="_blank" href="https://www.geeksforgeeks.org/difference-between-active-attack-and-passive-attack/">Difference between Active Attack and Passive Attack</a></li>
+                            </ul>
+                            <ul class="further-info">
+                                <li><span class="fi-span"><a target ="_blank" href="https://comtact.co.uk" style="color:white;">COMTACT</a></span><br><br></li>
+                                <li class="further-info"><a target="_blank" href="https://comtact.co.uk/blog/what-are-the-different-types-of-malware/">What are the different types of Malware</a></li>
+                                </ul>
+                            <ul class="further-info">
+                                <li><span class="fi-span"><a target ="_blank" href="https://phoenixnap.com" style="color:white;">PhoenixNAP</a></span><br><br></li>
+                            <li class="further-info"><a target="_blank" href="https://phoenixnap.com/blog/types-of-network-security">Types of Network Security Explained</a></li>
+                            </ul>
+                            <ul class="further-info">
+                                <li><span class="fi-span"><a target ="_blank" href="https://www.ssl.com" style="color:white;">SSL.com</a></span><li><br><br></li>
+                                <li class="further-info"><a target="_blank" href="https://www.ssl.com/faqs/what-is-a-certificate-authority">What Is a Certificate Authority (CA)?</a></li>
+                            </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
