@@ -70,10 +70,22 @@
             #title:hover, #title:focus{
                 background-color: rgb(197, 255, 252);
             }
-            header a:hover, header a:focus{
-                color:white;
-                background-color: rgb(47, 152, 223);
+            #W3C-nav:hover, #W3C-nav:focus{
+                background-color: rgba(86, 240, 56, 0.39);
+                color:black;
             }
+            #WAI-nav:hover, #WAI-nav:focus{
+                 background-color: rgba(39, 37, 37, 0.459);
+                 color: white;
+            }
+            #WCAG-nav:hover, #WCAG-nav:focus{
+                background-color: rgba(0, 4, 255, 0.562);
+                color:white;
+            }
+            #Further-information-nav:hover, #Further-information-nav:focus{
+		        background-color: rgba(247, 185, 51, 0.534);
+		        color:black;
+	        }
             header a:active{
                 border:4px outset rgb(247, 166, 45);
             }
@@ -119,7 +131,7 @@
                 margin-left:8%;
                 color: black;
             }
-            #header-left-side a:hover{
+            #header-left-side a:hover, #header-left-side a:focus{
                 color:white;
                 background-color: rgb(16, 8, 138);
             }
@@ -221,11 +233,11 @@
         <header>
             <img id="access-stand-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/WCAG2AAA-v.svg/1200px-WCAG2AAA-v.svg.png" alt="Image with the acronyms of the accessibility standards: W3C, WAI, WCAG">
             <nav>
-                <a href="#W3C" class="nav"> W3C </a>
-                <a href="#WAI" class="nav"> WAI </a>
+                <a href="#W3C" id="W3C-nav" class="nav"> W3C </a>
+                <a href="#WAI" id="WAI-nav" class="nav"> WAI </a>
                 <a href="https://alejandrodefranciscouceda.github.io/accessibility-standards" class="nav" id="title"><div> Accessibility<br>standards </div></a>
-                <a href="#WCAG" class="nav"> WCAG </a>
-                <a href="#Further-information" class="nav"> Further<br>information </a>
+                <a href="#WCAG" id="WCAG-nav" class="nav"> WCAG </a>
+                <a href="#Further-information" id="Further-information-nav" class="nav"> Further<br>information </a>
             </nav>
             <div id="header-right-side">
                 <img id="Logo" src = "https://alejandrodefranciscouceda.github.io/Logotipo(con-fondo-negro).png" alt="logotype of Alejandro de Francisco">
