@@ -68,12 +68,24 @@
                 display:inline;
             }
             #title:hover, #title:focus{
-                background-color: rgb(202, 255, 197);
+                background-color: rgba(202, 255, 197, 0.534);
             }
-            header a:hover, header a:focus{
-                color:white;
-                background-color: rgb(111, 238, 99);
-            }
+	    #obj-or-pro-nav:hover, #obj-or-pro-nav:focus{
+		background-color: rgba(28, 207, 231, 0.534);
+		color:white;
+	    }
+	    #struct-pro-nav:hover, #struct-pro-nav:focus{
+		background-color: rgba(193, 69, 224, 0.534);
+		color:white;
+	    }
+	    #differences-nav:hover, #differences-nav:focus{
+		background-color: rgba(61, 231, 45, 0.534);
+		color:white;
+	    }
+	    #Further-information-nav:hover, #Further-information-nav:focus{
+		background-color: rgba(247, 185, 51, 0.534);
+		color:black;
+	    }
             header a:active{
                 border:4px outset rgb(12, 43, 184);
             }
@@ -119,7 +131,7 @@
                 margin-left:8%;
                 color: black;
             }
-            #header-left-side a:hover{
+            #header-left-side a:hover, #header-left-side a:focus{
                 color:white;
                 background-color: rgb(16, 8, 138);
             }
@@ -235,11 +247,11 @@
         <header>
             <img id="obj-or-pro-vs-struc-pro-img" src="https://www.roberthalf.com/sites/default/files/2018-03/Object%20oriented%20programming.jpg" alt="Illustrative image which says: Object oriented programming">
             <nav>
-                <a href="#obj-or-pro" class="nav">Object oriented<br>programming </a>
-                <a href="#struct-pro" class="nav">Structured<br>programming </a>
-                <a href="https://alejandrodefranciscouceda.github.io/object-oriented-programming-vs-structured-programming.html" class="nav" id="title"><div>Object oriented programming<br>vs<br>structured programming </div></a>
-                <a href="#differences" class="nav">Differences<br>between them</a>
-                <a href="#Further-information" class="nav">Further<br>information</a>
+                <a href="#obj-or-pro" id="obj-or-pro-nav" class="nav">Object oriented<br>programming </a>
+                <a href="#struct-pro" id="struct-pro-nav" class="nav">Structured<br>programming </a>
+                <a href="https://alejandrodefranciscouceda.github.io/object-oriented-programming-vs-structured-programming.html" id="title" class="nav"><div>Object oriented programming<br>vs<br>structured programming </div></a>
+                <a href="#differences" id="differences-nav" class="nav">Differences<br>between them</a>
+                <a href="#Further-information" id="Further-information-nav" class="nav">Further<br>information</a>
             </nav>
             <div id="header-right-side">
                 <img id="Logo" src = "https://alejandrodefranciscouceda.github.io/Logotipo(con-fondo-negro).png" alt="logotype of Alejandro de Francisco">
